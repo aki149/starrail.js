@@ -88,7 +88,7 @@ class CachedAssetsManager {
     /** Path of directory where StarRail cache data is stored */
     cacheDirectoryPath: string;
 
-    _cacheUpdater: NodeJS.Timer | null;
+    _cacheUpdater: ReturnType<typeof setInterval>| null;
     _githubCache: ConfigFile | null;
     _isFetching: boolean;
 
